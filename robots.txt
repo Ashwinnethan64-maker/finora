@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /app.html
+
+# XML Sitemaps
+Sitemap: https://finora.in/sitemap.xml
