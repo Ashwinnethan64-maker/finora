@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { AnnouncementBar } from "@/components/navigation/AnnouncementBar";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/footer/Footer";
 
-const outfit = Outfit({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-inter",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "FINORA | Financial Intelligence. Advisory. Research. Tools.",
-  description: "FINORA is a flat financial intelligence platform combining corporate finance advisory, dynamic financial modeling, equity research, and financial tools for better decisions.",
+  description: "FINORA is a precision financial intelligence, advisory, research, and tools platform engineered for founders, finance teams, and enterprises.",
   keywords: [
     "Financial Intelligence",
     "Corporate Finance India",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://finora.in"),
   openGraph: {
     title: "FINORA | Financial Intelligence",
-    description: "Financial intelligence for better decisions.",
+    description: "Financial clarity for better decisions.",
     url: "https://finora.in",
     siteName: "FINORA",
     type: "website",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FINORA | Financial Intelligence",
-    description: "Financial intelligence for better decisions.",
+    description: "Financial clarity for better decisions.",
   }
 };
 
@@ -44,8 +45,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-background text-foreground antialiased selection:bg-primary selection:text-white font-sans">
+    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+      <body className="min-h-screen flex flex-col bg-paper text-ink antialiased selection:bg-ember selection:text-paper font-sans">
+        <AnnouncementBar />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

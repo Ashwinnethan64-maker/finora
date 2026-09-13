@@ -6,158 +6,153 @@ import { ArrowRight, ArrowUpRight, TrendingUp } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="bg-primary text-white py-16 sm:py-24 md:py-28 relative overflow-hidden">
-      
-      {/* Decorative Low-Opacity Flat Geometry */}
-      <div className="absolute -right-16 -top-16 w-96 h-96 rounded-full bg-white/5 pointer-events-none" />
-      <div className="absolute left-1/3 -bottom-24 w-72 h-72 rounded-full bg-black/5 pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <section className="bg-paper text-ink py-16 sm:py-24 md:py-28 border-b border-mist/40 relative overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
-          {/* Left Column: Bold Blue Editorial Copy */}
-          <div className="lg:col-span-7 space-y-8">
+          {/* Left Column: Asymmetric Editorial Copy */}
+          <div className="lg:col-span-6 space-y-6">
             
             {/* Eyebrow Label */}
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-md bg-white/10 text-white font-semibold text-xs tracking-wider uppercase">
-              <span className="w-2 h-2 rounded-full bg-accent"></span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-tag bg-fog border border-mist/50 text-graphite font-semibold text-xs tracking-wide uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-ember"></span>
               <span>Financial Intelligence • Advisory • Research</span>
             </div>
 
-            {/* Massive H1 Headline */}
-            <h1 className="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
-              Financial intelligence for <span className="text-accent underline decoration-white/40 decoration-4 underline-offset-8">better decisions.</span>
+            {/* Editorial H1 Headline */}
+            <h1 className="font-sans font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-tighter text-ink">
+              Financial clarity for <span className="text-ember">better</span> decisions.
             </h1>
 
-            {/* Supporting Value Prop */}
-            <p className="text-lg sm:text-xl text-white/90 leading-relaxed max-w-xl font-normal">
-              Finora combines financial expertise, analytical tools and research to help individuals and businesses understand their numbers, evaluate opportunities and make better decisions.
+            {/* Supporting Value Proposition */}
+            <p className="text-base sm:text-lg text-graphite leading-relaxed max-w-lg font-normal">
+              Finora combines financial expertise, research, analytics and intelligent financial tools to help individuals and businesses understand their numbers, evaluate opportunities and make better-informed financial decisions.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <Link
                 href="/consultation"
-                className="inline-flex items-center justify-center gap-2.5 h-14 px-8 bg-white hover:bg-muted text-primary font-bold text-base rounded-md transition-all active:scale-98"
+                className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-ember hover:bg-ember-hover text-white font-medium text-sm rounded-xl transition-all active:scale-[0.98]"
               >
                 <span>Book a Consultation</span>
-                <ArrowRight className="w-5 h-5 text-primary" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
 
               <Link
                 href="/intelligence"
-                className="inline-flex items-center justify-center gap-2.5 h-14 px-8 bg-primary-dark hover:bg-black/20 text-white font-bold text-base rounded-md transition-colors border border-white/20"
+                className="inline-flex items-center justify-center gap-2 h-12 px-6 bg-fog hover:bg-mist/30 text-ink font-medium text-sm rounded-xl transition-colors border border-mist/60"
               >
                 <span>Explore Finora Intelligence</span>
-                <ArrowUpRight className="w-5 h-5 text-white/70" />
+                <ArrowUpRight className="w-4 h-4 text-graphite" />
               </Link>
             </div>
 
           </div>
 
           {/* Right Column: Flat Financial Intelligence Product Preview */}
-          <div className="lg:col-span-5 bg-white text-foreground rounded-lg p-6 sm:p-8 space-y-6">
+          <div className="lg:col-span-6 bg-fog border border-mist/70 rounded-xl p-6 sm:p-8 space-y-6">
             
             {/* Header */}
-            <div className="flex items-center justify-between pb-4 border-b border-border">
+            <div className="flex items-center justify-between pb-4 border-b border-mist/50">
               <div>
-                <div className="font-extrabold text-sm text-foreground uppercase tracking-wide">
-                  Finora Intelligence
+                <div className="font-bold text-xs uppercase tracking-wider text-ink">
+                  FINORA INTELLIGENCE
                 </div>
-                <div className="text-xs text-muted-foreground font-medium">
-                  Financial Overview • Demo Sandbox
+                <div className="text-xs text-graphite font-medium">
+                  Financial Overview • Live Workbench
                 </div>
               </div>
-              <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-muted text-muted-foreground border border-border">
-                Demo Data
+              <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-tag bg-paper text-pewter border border-mist/60">
+                DEMO DATA
               </span>
             </div>
 
             {/* 4 Flat Metric Blocks */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 rounded-md bg-muted space-y-1">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="p-4 rounded-xl bg-paper border border-mist/40 space-y-1">
+                <div className="text-[11px] font-medium uppercase tracking-wider text-pewter">
                   Net Worth
                 </div>
-                <div className="font-mono text-2xl font-bold text-foreground">
+                <div className="font-sans text-2xl font-bold text-ink tabular-nums">
                   ₹24.8L
                 </div>
-                <div className="text-xs font-semibold text-secondary flex items-center gap-1">
-                  <TrendingUp className="w-3.5 h-3.5" /> +14.2% YoY
+                <div className="text-xs font-medium text-graphite flex items-center gap-1">
+                  <TrendingUp className="w-3.5 h-3.5 text-ember" /> +14.2% YoY
                 </div>
               </div>
 
-              <div className="p-4 rounded-md bg-muted space-y-1">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+              <div className="p-4 rounded-xl bg-paper border border-mist/40 space-y-1">
+                <div className="text-[11px] font-medium uppercase tracking-wider text-pewter">
                   Investments
                 </div>
-                <div className="font-mono text-2xl font-bold text-foreground">
+                <div className="font-sans text-2xl font-bold text-ink tabular-nums">
                   ₹14.2L
                 </div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-xs text-pewter">
                   Multi-Asset
                 </div>
               </div>
 
-              <div className="p-4 rounded-md bg-muted space-y-1">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+              <div className="p-4 rounded-xl bg-paper border border-mist/40 space-y-1">
+                <div className="text-[11px] font-medium uppercase tracking-wider text-pewter">
                   Liquidity
                 </div>
-                <div className="font-mono text-2xl font-bold text-foreground">
+                <div className="font-sans text-2xl font-bold text-ink tabular-nums">
                   ₹4.6L
                 </div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-xs text-pewter">
                   5.8 Mo Buffer
                 </div>
               </div>
 
-              <div className="p-4 rounded-md bg-muted space-y-1">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+              <div className="p-4 rounded-xl bg-paper border border-mist/40 space-y-1">
+                <div className="text-[11px] font-medium uppercase tracking-wider text-pewter">
                   Liabilities
                 </div>
-                <div className="font-mono text-2xl font-bold text-foreground">
+                <div className="font-sans text-2xl font-bold text-ink tabular-nums">
                   ₹6.1L
                 </div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-xs text-pewter">
                   Low Cost
                 </div>
               </div>
             </div>
 
             {/* Asset Allocation Flat Bar */}
-            <div className="space-y-2.5 pt-2">
-              <div className="flex justify-between text-xs font-bold text-foreground">
+            <div className="space-y-2 pt-1">
+              <div className="flex justify-between text-xs font-semibold text-ink">
                 <span>Asset Allocation Profile</span>
-                <span className="text-muted-foreground font-normal">100% Reconciled</span>
+                <span className="text-pewter font-normal">100% Reconciled</span>
               </div>
-              <div className="w-full h-3 rounded bg-muted flex overflow-hidden">
-                <div style={{ width: "52%" }} className="bg-primary" title="Equities (52%)" />
-                <div style={{ width: "24%" }} className="bg-secondary" title="Debt (24%)" />
-                <div style={{ width: "16%" }} className="bg-accent" title="Cash (16%)" />
-                <div style={{ width: "8%" }} className="bg-muted-foreground" title="Alternatives (8%)" />
+              <div className="w-full h-2.5 rounded-full bg-mist/30 flex overflow-hidden">
+                <div style={{ width: "52%" }} className="bg-ink" title="Equities (52%)" />
+                <div style={{ width: "24%" }} className="bg-ember" title="Debt (24%)" />
+                <div style={{ width: "16%" }} className="bg-steel" title="Cash (16%)" />
+                <div style={{ width: "8%" }} className="bg-mist" title="Alternatives (8%)" />
               </div>
-              <div className="flex flex-wrap gap-4 text-[11px] text-muted-foreground pt-1">
-                <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-primary" /> Equities (52%)</span>
-                <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-secondary" /> Debt (24%)</span>
-                <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-sm bg-accent" /> Cash (16%)</span>
+              <div className="flex flex-wrap gap-4 text-[11px] text-graphite pt-1">
+                <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-ink" /> Equities (52%)</span>
+                <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-ember" /> Debt (24%)</span>
+                <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-steel" /> Cash (16%)</span>
               </div>
             </div>
 
             {/* Financial Health Flat Box */}
-            <div className="p-4 rounded-md bg-secondary-subtle border border-secondary/20 flex items-center justify-between">
+            <div className="p-4 rounded-xl bg-paper border border-mist/60 flex items-center justify-between">
               <div>
-                <div className="text-[11px] font-bold uppercase tracking-wider text-secondary-dark">
+                <div className="text-[10px] font-semibold uppercase tracking-wider text-pewter">
                   Financial Health
                 </div>
-                <div className="text-base font-extrabold text-foreground">
+                <div className="text-sm font-bold text-ink">
                   Strong Balance Sheet
                 </div>
               </div>
               <Link
                 href="/portal"
-                className="text-xs font-bold text-primary hover:underline"
+                className="text-xs font-semibold text-ember hover:underline"
               >
-                Open OS →
+                Open Workbench →
               </Link>
             </div>
 

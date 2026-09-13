@@ -22,38 +22,38 @@ export function TrustCenterTeaser() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-white border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section className="py-20 sm:py-24 bg-paper border-b border-mist/40">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-border">
-          <div className="max-w-3xl space-y-3">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-primary block">
-              INSTITUTIONAL TRUST & GOVERNANCE
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-mist/50">
+          <div className="max-w-2xl space-y-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-pewter block">
+              INSTITUTIONAL TRUST
             </span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-foreground leading-[1.08] tracking-tight">
-              Trust as a core product feature.
+            <h2 className="font-sans font-bold text-3xl sm:text-5xl text-ink leading-tight tracking-tight">
+              FINORA Trust Center
             </h2>
           </div>
           <Link
             href="/trust"
-            className="text-sm font-bold text-primary hover:underline inline-flex items-center gap-1.5 whitespace-nowrap"
+            className="text-sm font-semibold text-ink hover:text-ember inline-flex items-center gap-1.5 whitespace-nowrap transition-colors"
           >
-            Read trust charter <ArrowRight className="w-4 h-4" />
+            Read trust charter <ArrowRight className="w-4 h-4 text-ember" />
           </Link>
         </div>
 
         {/* 3 Pillar Blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {pillars.map((item, i) => (
-            <div key={i} className="p-8 rounded-lg bg-muted border border-border space-y-4">
-              <div className="w-10 h-10 rounded-md bg-primary-subtle text-primary flex items-center justify-center">
-                <item.icon className="w-5 h-5" />
+            <div key={i} className="p-8 rounded-xl bg-fog border border-mist/50 space-y-4">
+              <div className="w-9 h-9 rounded-lg bg-paper border border-mist/50 text-ink flex items-center justify-center">
+                <item.icon className="w-4 h-4 text-ember" />
               </div>
-              <h3 className="font-display font-bold text-xl text-foreground">
+              <h3 className="font-sans font-bold text-lg text-ink">
                 {item.title}
               </h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <p className="text-xs text-graphite leading-relaxed">
                 {item.desc}
               </p>
             </div>

@@ -41,44 +41,47 @@ export function HowFinoraWorks() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-dark text-white border-b border-dark-surface">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section className="py-20 sm:py-24 bg-abyss text-paper border-b border-carbon">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-3">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-accent block">
-            THE 6-STAGE PROTOCOL
+        <div className="max-w-2xl space-y-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-ember block">
+            HOW FINORA WORKS
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.08] tracking-tight">
-            How Finora works.
+          <h2 className="font-sans font-bold text-3xl sm:text-5xl text-paper leading-tight tracking-tight">
+            The 6-Stage Process
           </h2>
+          <p className="text-sm text-steel">
+            A controlled, repeatable protocol for rigorous corporate financial clarity.
+          </p>
         </div>
 
         {/* 6 Process Step Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {steps.map((step, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-lg bg-dark-surface border border-dark-muted space-y-4 hover:border-primary transition-colors"
+              className="p-6 rounded-xl bg-carbon border border-white/10 space-y-3 hover:border-white/20 transition-colors"
             >
               <div className="flex items-center justify-between">
-                <span className="font-mono text-xl font-extrabold text-accent">
+                <span className="font-sans text-lg font-bold text-ember">
                   {step.num}
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-dark-foreground/60">
+                <span className="text-[10px] font-semibold uppercase tracking-widest text-steel">
                   STAGE {step.num}
                 </span>
               </div>
 
-              <h3 className="font-display font-bold text-xl uppercase text-white">
+              <h3 className="font-sans font-bold text-base uppercase text-paper tracking-wide">
                 {step.title}
               </h3>
 
-              <div className="text-xs font-bold text-white/90">
+              <div className="text-xs font-semibold text-paper/90">
                 {step.summary}
               </div>
 
-              <p className="text-xs text-dark-foreground/80 leading-relaxed">
+              <p className="text-xs text-steel leading-relaxed">
                 {step.detail}
               </p>
             </div>

@@ -8,70 +8,80 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#FFFFFF",
-        foreground: "#111827",
+        // FINORA Centralized Semantic Color Tokens
+        ember: {
+          DEFAULT: "#ff5900",
+          hover: "#e04e00",
+          subtle: "#fff4ed",
+        },
+        abyss: "#000710",
+        carbon: "#15191e",
+        ink: "#000000",
+        paper: "#ffffff",
+        fog: "#f3f3f7",
+        mist: "#b9bbc6",
+        steel: "#8b8d98",
+        pewter: "#6f737b",
+        graphite: "#60646c",
+        
+        // Semantic mappings
+        background: "#ffffff",
+        foreground: "#000000",
         primary: {
-          DEFAULT: "#3B82F6",
-          dark: "#2563EB",
-          light: "#60A5FA",
-          subtle: "#EFF6FF",
-          foreground: "#FFFFFF",
+          DEFAULT: "#ff5900",
+          hover: "#e04e00",
+          subtle: "#fff4ed",
+          foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#10B981",
-          dark: "#059669",
-          subtle: "#ECFDF5",
-          foreground: "#FFFFFF",
-        },
-        accent: {
-          DEFAULT: "#F59E0B",
-          dark: "#D97706",
-          subtle: "#FEF3C7",
-          foreground: "#111827",
+          DEFAULT: "#15191e",
+          foreground: "#ffffff",
         },
         muted: {
-          DEFAULT: "#F3F4F6",
-          dark: "#E5E7EB",
-          foreground: "#4B5563",
-          subtle: "#9CA3AF",
+          DEFAULT: "#f3f3f7",
+          foreground: "#60646c",
+          subtle: "#8b8d98",
         },
         border: {
-          DEFAULT: "#E5E7EB",
-          strong: "#D1D5DB",
-          dark: "#111827",
-        },
-        dark: {
-          DEFAULT: "#111827",
-          surface: "#1F2937",
-          muted: "#374151",
-          foreground: "#F9FAFB",
+          DEFAULT: "#b9bbc6",
+          light: "#e2e3ea",
+          subtle: "#eceef3",
         },
         danger: {
-          DEFAULT: "#EF4444",
-          subtle: "#FEF2F2",
+          DEFAULT: "#dc2626",
+          subtle: "#fef2f2",
         }
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "Outfit", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "Outfit", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        display: ["var(--font-inter)", "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+      },
+      letterSpacing: {
+        tighter: "-0.03em",
+        tight: "-0.02em",
+        snug: "-0.01em",
+        normal: "0em",
       },
       borderRadius: {
+        tag: "6px",
         sm: "6px",
-        DEFAULT: "8px",
-        md: "8px",
-        lg: "10px",
+        DEFAULT: "12px",
+        md: "12px",
+        lg: "12px",
         xl: "12px",
+        card: "12px",
+        input: "12px",
+        btn: "12px",
         full: "9999px",
       },
-      borderWidth: {
-        DEFAULT: "1px",
-        '2': "2px",
-        '4': "4px",
+      maxWidth: {
+        container: "1200px",
       },
       boxShadow: {
         none: "none",
+        floating: "0 8px 30px rgba(0, 0, 0, 0.08)",
       }
     },
   },
   plugins: [],
-}
+};

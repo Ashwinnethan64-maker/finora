@@ -1,26 +1,29 @@
 import React from "react";
 
 export function TrustStrip() {
-  const pillars = [
-    { label: "FINANCIAL MODELLING", desc: "Institutional 3-statement logic" },
-    { label: "CORPORATE FINANCE", desc: "Debt syndication & CMA" },
-    { label: "EQUITY RESEARCH", desc: "Sectoral valuation comps" },
-    { label: "RISK & LIQUIDITY", desc: "Working capital optimization" },
-    { label: "ANALYTICS", desc: "Granular unit economics" },
-    { label: "STRATEGY", desc: "Fractional CFO leadership" },
+  const disciplines = [
+    { label: "Financial Modelling", desc: "Institutional 3-statement logic" },
+    { label: "Corporate Finance", desc: "Capital structures & syndication" },
+    { label: "Equity Research", desc: "Sectoral valuation comps" },
+    { label: "Risk Management", desc: "Working capital optimization" },
+    { label: "Financial Analytics", desc: "Granular unit economics" },
+    { label: "Strategic Planning", desc: "Fractional CFO leadership" },
   ];
 
   return (
-    <section className="bg-muted border-b border-border py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {pillars.map((pillar, i) => (
-            <div key={i} className="space-y-1">
-              <div className="text-xs font-extrabold uppercase tracking-wider text-foreground">
-                {pillar.label}
+    <section className="bg-fog border-b border-mist/40 py-10">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div className="text-[11px] font-bold uppercase tracking-widest text-pewter text-center sm:text-left">
+          FINANCIAL EXPERTISE. BUILT AROUND THE DECISION.
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {disciplines.map((item, i) => (
+            <div key={i} className="p-4 rounded-xl bg-paper border border-mist/40 space-y-1">
+              <div className="text-xs font-bold text-ink">
+                {item.label}
               </div>
-              <div className="text-xs text-muted-foreground font-normal">
-                {pillar.desc}
+              <div className="text-[11px] text-pewter font-normal leading-snug">
+                {item.desc}
               </div>
             </div>
           ))}

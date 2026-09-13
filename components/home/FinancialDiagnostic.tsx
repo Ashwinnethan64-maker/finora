@@ -6,21 +6,21 @@ import { ArrowRight, CheckCircle2, RotateCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const AUDIENCES = [
-  { id: "founder", label: "Startup Founder / Operator" },
-  { id: "sme", label: "Mid-Market SME Owner" },
+  { id: "founder", label: "Startup Founder" },
+  { id: "sme", label: "Mid-Market SME" },
   { id: "investor", label: "Investor / PE / VC" },
   { id: "individual", label: "Individual / HNI" },
   { id: "pro", label: "Finance Professional" },
-  { id: "student", label: "Finance Student / Analyst" },
+  { id: "student", label: "Finance Student" },
 ];
 
 const PROBLEMS = [
-  { id: "cashflow", label: "Cash Flow & Runway Visibility" },
-  { id: "modelling", label: "3-Statement Financial Modelling" },
-  { id: "fundraising", label: "Fundraising Diligence Defense" },
-  { id: "valuation", label: "Corporate Valuation & Peer Comps" },
-  { id: "risk", label: "Working Capital Drag & Risk" },
-  { id: "tax", label: "Section 54F / ESOP Liquidity" },
+  { id: "cashflow", label: "Cash Flow Visibility" },
+  { id: "valuation", label: "Valuation & Comps" },
+  { id: "fundraising", label: "Fundraising Support" },
+  { id: "modelling", label: "Financial Modelling" },
+  { id: "risk", label: "Working Capital Risk" },
+  { id: "planning", label: "Strategic Planning" },
 ];
 
 export function FinancialDiagnostic() {
@@ -32,22 +32,22 @@ export function FinancialDiagnostic() {
     if (audience === "sme" || problem === "cashflow" || problem === "risk") {
       return {
         title: "FINORA Financial Health Assessment",
-        why: "Your responses indicate that working capital visibility, debtor collection compression, and rolling cash flow planning are your highest priorities.",
+        why: "Your responses indicate working capital visibility, debtor cycle compression, and rolling cash flow planning are high-priority needs.",
         cta: "Book an Assessment",
         href: "/consultation"
       };
     }
-    if (problem === "fundraising" || problem === "modelling") {
+    if (problem === "fundraising" || problem === "modelling" || problem === "valuation") {
       return {
-        title: "Venture Financial Modelling Sprint",
-        why: "Your responses suggest an upcoming capital round requiring an institutional 3-statement forecast with reconciled unit economics.",
+        title: "Corporate Financial Modelling Sprint",
+        why: "Your responses suggest an active corporate transaction or capital round requiring an institutional 3-statement model.",
         cta: "Request Model Scope",
         href: "/consultation"
       };
     }
     return {
       title: "Strategic Financial Consultation",
-      why: "Your situation requires tailored capital structure advisory and statutory tax engineering to optimize post-tax liquidity.",
+      why: "Your situation requires tailored capital structure planning and financial architecture advisory.",
       cta: "Schedule Consultation",
       href: "/consultation"
     };
@@ -56,42 +56,42 @@ export function FinancialDiagnostic() {
   const rec = getRecommendation();
 
   return (
-    <section id="diagnostic" className="py-20 sm:py-28 bg-white border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="diagnostic" className="py-20 sm:py-24 bg-paper border-b border-mist/40">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-3">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-primary block">
-            INTERACTIVE FINANCIAL TOOL
+        <div className="max-w-2xl space-y-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-pewter block">
+            FINANCIAL DIAGNOSTIC
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-foreground tracking-tight">
-            Finora Financial Diagnostic
+          <h2 className="font-sans font-bold text-3xl sm:text-4xl text-ink tracking-tight">
+            Interactive Financial Assessment
           </h2>
-          <p className="text-base text-muted-foreground">
-            Understand your immediate financial needs and receive an actionable next step.
+          <p className="text-sm text-graphite">
+            Clarify your immediate financial needs and receive a structured next step.
           </p>
         </div>
 
         {/* Flat Diagnostic Box */}
-        <div className="max-w-4xl rounded-lg border-2 border-border p-8 sm:p-12 bg-muted space-y-8">
+        <div className="max-w-3xl rounded-xl border border-mist/70 p-6 sm:p-10 bg-fog space-y-6">
           
           {step === 1 && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="flex items-center justify-between pb-3 border-b border-border text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                <span className="text-primary font-extrabold">Step 1 of 2 • What are you?</span>
+              <div className="flex items-center justify-between pb-3 border-b border-mist/40 text-xs font-semibold uppercase tracking-wider text-pewter">
+                <span className="text-ink font-bold">STEP 01 • WHAT ARE YOU?</span>
                 <span>Select profile</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {AUDIENCES.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => setAudience(item.id)}
                     className={cn(
-                      "p-4 rounded-md border-2 text-left font-bold text-sm transition-all",
+                      "p-4 rounded-xl border text-left font-medium text-xs sm:text-sm transition-all",
                       audience === item.id
-                        ? "border-primary bg-primary text-white"
-                        : "border-border bg-white text-foreground hover:border-primary"
+                        ? "border-ember bg-paper text-ink shadow-none font-semibold ring-1 ring-ember"
+                        : "border-mist/60 bg-paper text-graphite hover:border-mist hover:text-ink"
                     )}
                   >
                     {item.label}
@@ -99,12 +99,12 @@ export function FinancialDiagnostic() {
                 ))}
               </div>
 
-              <div className="pt-4 flex justify-end">
+              <div className="pt-2 flex justify-end">
                 <button
                   onClick={() => setStep(2)}
-                  className="h-12 px-7 rounded-md bg-primary hover:bg-primary-dark text-white font-bold text-sm transition-all"
+                  className="h-10 px-6 rounded-xl bg-ink hover:bg-carbon text-paper font-medium text-xs sm:text-sm transition-all"
                 >
-                  Continue to Objectives →
+                  Continue to Priorities →
                 </button>
               </div>
             </div>
@@ -112,21 +112,21 @@ export function FinancialDiagnostic() {
 
           {step === 2 && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="flex items-center justify-between pb-3 border-b border-border text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                <span className="text-primary font-extrabold">Step 2 of 2 • What are you trying to solve?</span>
-                <span>Select priority</span>
+              <div className="flex items-center justify-between pb-3 border-b border-mist/40 text-xs font-semibold uppercase tracking-wider text-pewter">
+                <span className="text-ink font-bold">STEP 02 • WHAT ARE YOU TRYING TO SOLVE?</span>
+                <span>Select focus</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {PROBLEMS.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => setProblem(item.id)}
                     className={cn(
-                      "p-4 rounded-md border-2 text-left font-bold text-sm transition-all",
+                      "p-4 rounded-xl border text-left font-medium text-xs sm:text-sm transition-all",
                       problem === item.id
-                        ? "border-primary bg-primary text-white"
-                        : "border-border bg-white text-foreground hover:border-primary"
+                        ? "border-ember bg-paper text-ink shadow-none font-semibold ring-1 ring-ember"
+                        : "border-mist/60 bg-paper text-graphite hover:border-mist hover:text-ink"
                     )}
                   >
                     {item.label}
@@ -134,16 +134,16 @@ export function FinancialDiagnostic() {
                 ))}
               </div>
 
-              <div className="pt-4 flex items-center justify-between">
+              <div className="pt-2 flex items-center justify-between">
                 <button
                   onClick={() => setStep(1)}
-                  className="text-xs font-bold text-muted-foreground hover:text-foreground"
+                  className="text-xs font-medium text-graphite hover:text-ink"
                 >
                   ← Back
                 </button>
                 <button
                   onClick={() => setStep(3)}
-                  className="h-12 px-7 rounded-md bg-primary hover:bg-primary-dark text-white font-bold text-sm transition-all"
+                  className="h-10 px-6 rounded-xl bg-ember hover:bg-ember-hover text-paper font-medium text-xs sm:text-sm transition-all"
                 >
                   Generate Recommendation →
                 </button>
@@ -153,24 +153,24 @@ export function FinancialDiagnostic() {
 
           {step === 3 && (
             <div className="space-y-6 animate-fadeIn">
-              <div className="flex items-center justify-between pb-3 border-b border-border text-xs font-bold uppercase tracking-wider text-secondary">
-                <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4" /> Recommendation Ready</span>
+              <div className="flex items-center justify-between pb-3 border-b border-mist/40 text-xs font-semibold uppercase tracking-wider text-graphite">
+                <span className="flex items-center gap-1.5 text-ink font-bold"><CheckCircle2 className="w-4 h-4 text-ember" /> RECOMMENDED NEXT STEP</span>
                 <button
                   onClick={() => setStep(1)}
-                  className="text-muted-foreground hover:text-foreground flex items-center gap-1 font-semibold"
+                  className="text-pewter hover:text-ink flex items-center gap-1 text-xs"
                 >
                   <RotateCcw className="w-3.5 h-3.5" /> Restart
                 </button>
               </div>
 
-              <div className="space-y-3 bg-white p-6 rounded-md border border-border">
-                <span className="text-xs font-extrabold uppercase tracking-wider text-primary block">
-                  Your Recommended Next Step:
+              <div className="space-y-3 bg-paper p-6 rounded-xl border border-mist/60">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-ember block">
+                  RECOMMENDED ADVISORY ACTION
                 </span>
-                <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-foreground">
+                <h3 className="font-sans font-bold text-xl sm:text-2xl text-ink">
                   {rec.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs sm:text-sm text-graphite leading-relaxed">
                   {rec.why}
                 </p>
               </div>
@@ -178,13 +178,13 @@ export function FinancialDiagnostic() {
               <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
                 <Link
                   href={rec.href}
-                  className="h-13 px-8 rounded-md bg-primary hover:bg-primary-dark text-white font-bold text-sm inline-flex items-center gap-2"
+                  className="h-11 px-6 rounded-xl bg-ember hover:bg-ember-hover text-white font-medium text-xs sm:text-sm inline-flex items-center gap-2 transition-all"
                 >
                   {rec.cta} →
                 </Link>
                 <Link
                   href="/advisory"
-                  className="text-xs font-bold text-muted-foreground hover:text-foreground"
+                  className="text-xs font-medium text-graphite hover:text-ink"
                 >
                   Browse all advisory disciplines
                 </Link>

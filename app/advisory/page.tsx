@@ -10,51 +10,51 @@ export const metadata = {
 
 export default function AdvisoryPage() {
   return (
-    <div className="bg-white py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <div className="bg-paper py-16 md:py-24">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Page Header */}
-        <div className="max-w-3xl space-y-4">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-primary block">
+        <div className="max-w-2xl space-y-3">
+          <span className="text-xs font-bold uppercase tracking-widest text-pewter block">
             FINORA ADVISORY
           </span>
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl text-foreground tracking-tight leading-tight">
-            Financial & Corporate Consulting Disciplines
+          <h1 className="font-sans font-bold text-3xl sm:text-5xl text-ink tracking-tight leading-tight">
+            Financial & Corporate Advisory
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            High-conviction financial engineering tailored for capital raises, balance sheet optimizations, and strategic transactions.
+          <p className="text-base sm:text-lg text-graphite leading-relaxed">
+            High-conviction financial engineering tailored for capital raises, balance sheet optimizations, and strategic corporate decisions.
           </p>
         </div>
 
         {/* 8 Full Service Deconstructions */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {SERVICES_DATA.map((service) => (
             <div
               key={service.id}
               id={service.id}
-              className="p-8 sm:p-10 rounded-lg border border-border bg-muted space-y-6"
+              className="p-8 sm:p-10 rounded-xl border border-mist/60 bg-fog space-y-6"
             >
-              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-border gap-4">
-                <div className="flex items-baseline gap-4 sm:gap-6">
-                  <span className="font-mono text-xl font-extrabold text-primary px-3 py-1 rounded bg-primary-subtle">
+              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-4 border-b border-mist/40 gap-4">
+                <div className="flex items-baseline gap-4">
+                  <span className="font-sans text-sm font-bold text-pewter px-2.5 py-1 rounded-tag bg-paper border border-mist/40">
                     {service.number}
                   </span>
-                  <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-foreground">
+                  <h2 className="font-sans font-bold text-xl sm:text-2xl text-ink">
                     {service.title}
                   </h2>
                 </div>
-                <span className="text-xs font-semibold px-3 py-1 rounded bg-white text-muted-foreground border border-border w-fit">
+                <span className="text-xs font-medium px-3 py-1 rounded-tag bg-paper text-pewter border border-mist/40 w-fit">
                   {service.engagement} • {service.timeline}
                 </span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
                 <div className="md:col-span-6 space-y-4">
-                  <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm text-graphite leading-relaxed">
                     {service.summary}
                   </p>
-                  <div className="p-4 rounded-md bg-white border border-border text-xs text-muted-foreground space-y-1">
-                    <div className="font-bold text-foreground uppercase tracking-wider">
+                  <div className="p-4 rounded-xl bg-paper border border-mist/50 text-xs text-graphite space-y-1">
+                    <div className="font-semibold text-ink uppercase text-[11px]">
                       Ideal For:
                     </div>
                     <div>{service.whoItsFor}</div>
@@ -62,13 +62,13 @@ export default function AdvisoryPage() {
                 </div>
 
                 <div className="md:col-span-6 space-y-4">
-                  <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                    Key Milestone Deliverables
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-pewter">
+                    Key Deliverables
                   </div>
-                  <ul className="space-y-2.5">
+                  <ul className="space-y-2">
                     {service.deliverables.map((del, idx) => (
-                      <li key={idx} className="text-xs sm:text-sm text-foreground flex items-start gap-2.5">
-                        <Check className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                      <li key={idx} className="text-xs text-graphite flex items-start gap-2.5">
+                        <Check className="w-3.5 h-3.5 text-ember flex-shrink-0 mt-0.5" />
                         <span>{del}</span>
                       </li>
                     ))}
@@ -77,9 +77,10 @@ export default function AdvisoryPage() {
                   <div className="pt-4 flex justify-end">
                     <Link
                       href="/consultation"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary hover:bg-primary-dark text-white font-bold text-xs uppercase tracking-wider transition-colors"
+                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-ink hover:bg-carbon text-paper font-medium text-xs transition-colors"
                     >
-                      Scope this Service →
+                      <span>Scope this Service</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>

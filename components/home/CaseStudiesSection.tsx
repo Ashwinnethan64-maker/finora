@@ -23,60 +23,60 @@ export function CaseStudiesSection() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-muted border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section className="py-20 sm:py-24 bg-paper border-b border-mist/40">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         
         {/* Section Header */}
-        <div className="max-w-3xl space-y-3">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-primary block">
+        <div className="max-w-2xl space-y-2">
+          <span className="text-xs font-bold uppercase tracking-widest text-pewter block">
             VERIFIED CASE STUDIES
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-foreground leading-[1.08] tracking-tight">
+          <h2 className="font-sans font-bold text-3xl sm:text-5xl text-ink leading-tight tracking-tight">
             From problem to decision.
           </h2>
-          <p className="text-base text-muted-foreground">
-            All case studies are strictly anonymized under mutual Non-Disclosure covenants. Zero fabricated metrics.
+          <p className="text-sm text-graphite">
+            All case studies are strictly anonymized under mutual Non-Disclosure covenants. Zero fabricated credentials.
           </p>
         </div>
 
         {/* Case Study Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {cases.map((item, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-lg bg-white border border-border flex flex-col justify-between space-y-6"
+              className="p-8 rounded-xl bg-fog border border-mist/60 flex flex-col justify-between space-y-6"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-border">
-                  <span className="text-xs font-extrabold text-muted-foreground uppercase tracking-wider">
+                <div className="flex items-center justify-between pb-3 border-b border-mist/40">
+                  <span className="text-[11px] font-bold text-pewter uppercase tracking-wider">
                     {item.client}
                   </span>
-                  <span className="text-xs font-bold text-secondary px-2 py-0.5 rounded bg-secondary-subtle">
+                  <span className="text-xs font-semibold text-ink px-2 py-0.5 rounded-tag bg-paper border border-mist/50">
                     {item.metric}
                   </span>
                 </div>
 
-                <div className="space-y-2 text-xs">
-                  <div className="font-bold text-primary uppercase">01 The Problem</div>
-                  <p className="text-muted-foreground leading-relaxed">{item.problem}</p>
+                <div className="space-y-1.5 text-xs">
+                  <div className="font-bold text-ink uppercase text-[11px]">THE PROBLEM</div>
+                  <p className="text-graphite leading-relaxed">{item.problem}</p>
                 </div>
 
-                <div className="space-y-2 text-xs">
-                  <div className="font-bold text-primary uppercase">02 The Analysis & Model</div>
-                  <p className="text-muted-foreground leading-relaxed">{item.analysis} {item.model}</p>
+                <div className="space-y-1.5 text-xs">
+                  <div className="font-bold text-ink uppercase text-[11px]">THE ANALYSIS & MODEL</div>
+                  <p className="text-graphite leading-relaxed">{item.analysis} {item.model}</p>
                 </div>
 
-                <div className="space-y-2 text-xs">
-                  <div className="font-bold text-primary uppercase">03 The Decision</div>
-                  <p className="text-muted-foreground leading-relaxed">{item.decision}</p>
+                <div className="space-y-1.5 text-xs">
+                  <div className="font-bold text-ink uppercase text-[11px]">THE DECISION</div>
+                  <p className="text-graphite leading-relaxed">{item.decision}</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-md bg-secondary-subtle border border-secondary/20">
-                <div className="text-[11px] font-bold text-secondary-dark uppercase tracking-wider">
-                  04 The Outcome
+              <div className="p-4 rounded-xl bg-paper border border-mist/60 space-y-1">
+                <div className="text-[10px] font-bold text-pewter uppercase tracking-wider">
+                  THE OUTCOME
                 </div>
-                <div className="text-xs sm:text-sm font-bold text-foreground mt-0.5">
+                <div className="text-xs sm:text-sm font-semibold text-ink">
                   {item.outcome}
                 </div>
               </div>

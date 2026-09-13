@@ -4,31 +4,30 @@
 
 @layer base {
   :root {
-    --background: #FFFFFF;
-    --foreground: #111827;
-    --primary: #3B82F6;
-    --primary-dark: #2563EB;
-    --primary-foreground: #FFFFFF;
-    --secondary: #10B981;
-    --accent: #F59E0B;
-    --muted: #F3F4F6;
-    --muted-foreground: #4B5563;
-    --border: #E5E7EB;
-    --dark: #111827;
+    --color-ember: #ff5900;
+    --color-abyss: #000710;
+    --color-carbon: #15191e;
+    --color-ink: #000000;
+    --color-paper: #ffffff;
+    --color-fog: #f3f3f7;
+    --color-mist: #b9bbc6;
+    --color-steel: #8b8d98;
+    --color-pewter: #6f737b;
+    --color-graphite: #60646c;
   }
 
   body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-sans), 'Outfit', sans-serif;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
 
-  /* Accessible high-contrast blue focus states */
+  /* High contrast accessible Ember focus state */
   :focus-visible {
-    outline: 2px solid #3B82F6 !important;
+    outline: 2px solid #ff5900 !important;
     outline-offset: 2px;
   }
 }
@@ -36,6 +35,14 @@
 /* Tabular figures for financial numbers */
 .tabular-nums {
   font-variant-numeric: tabular-nums;
+}
+
+/* Flat financial card standard */
+.finora-card {
+  background-color: #ffffff;
+  border: 1px solid #b9bbc6;
+  border-radius: 12px;
+  box-shadow: none;
 }
 
 /* Reduced motion support */

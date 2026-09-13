@@ -49,7 +49,7 @@ const TIERS = [
       "Monthly MIS & Unit Variance Telemetry",
       "Quarterly Board Meeting Pack Generation",
       "Bank Consortia Working Capital Alignment",
-      "Direct Partner Slack / WhatsApp Channel"
+      "Direct Partner Advisory Channel"
     ],
     cta: "Apply for Retainer"
   },
@@ -71,68 +71,68 @@ const TIERS = [
 
 export default function PricingPage() {
   return (
-    <div className="bg-white py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <div className="bg-paper py-16 md:py-24">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Header */}
-        <div className="max-w-3xl space-y-4">
-          <span className="text-xs font-extrabold uppercase tracking-widest text-primary block">
-            TRANSPARENT ENGAGEMENT MODELS
+        <div className="max-w-2xl space-y-3">
+          <span className="text-xs font-bold uppercase tracking-widest text-pewter block">
+            FINORA ENGAGEMENTS
           </span>
-          <h1 className="font-display font-extrabold text-4xl sm:text-6xl text-foreground tracking-tight leading-tight">
-            Consulting Scope & Engagement Tiers
+          <h1 className="font-sans font-bold text-3xl sm:text-5xl text-ink tracking-tight leading-tight">
+            Consulting Scope & Tiers
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-graphite leading-relaxed">
             Predictable milestone-governed corporate finance advisory. Zero vague hourly billing overages.
           </p>
         </div>
 
         {/* 4 Tiers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {TIERS.map((tier) => (
             <div
               key={tier.name}
-              className={`p-8 rounded-lg bg-muted border flex flex-col justify-between space-y-6 ${
-                tier.featured ? "border-2 border-primary bg-primary-subtle/30" : "border-border"
+              className={`p-8 rounded-xl bg-fog border flex flex-col justify-between space-y-6 ${
+                tier.featured ? "border-ember ring-1 ring-ember bg-paper" : "border-mist/60"
               }`}
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold text-primary">
+                  <span className="text-xs font-bold text-pewter">
                     TIER {tier.tier}
                   </span>
                   {tier.featured && (
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded bg-primary text-white">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-tag bg-ember text-white">
                       Popular
                     </span>
                   )}
                 </div>
 
-                <h3 className="font-display font-extrabold text-xl text-foreground">
+                <h3 className="font-sans font-bold text-lg text-ink">
                   {tier.name}
                 </h3>
                 
                 <div>
-                  <div className="font-mono text-3xl font-extrabold text-foreground">
+                  <div className="font-sans text-3xl font-bold text-ink tabular-nums">
                     {tier.price}
                   </div>
-                  <div className="text-xs text-muted-foreground font-semibold mt-0.5">
+                  <div className="text-xs text-pewter font-medium mt-0.5">
                     {tier.cadence}
                   </div>
                 </div>
 
-                <div className="text-xs text-muted-foreground leading-relaxed pt-2 border-t border-border">
-                  <strong className="text-foreground">Who it's for: </strong> {tier.whoItsFor}
+                <div className="text-xs text-graphite leading-relaxed pt-2 border-t border-mist/30">
+                  <strong className="text-ink">Who it's for: </strong> {tier.whoItsFor}
                 </div>
 
                 <div className="space-y-2 pt-2">
-                  <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-pewter">
                     Included:
                   </div>
                   <ul className="space-y-2">
                     {tier.deliverables.map((del, i) => (
-                      <li key={i} className="text-xs text-foreground flex items-start gap-2">
-                        <Check className="w-3.5 h-3.5 text-secondary flex-shrink-0 mt-0.5" />
+                      <li key={i} className="text-xs text-graphite flex items-start gap-2">
+                        <Check className="w-3.5 h-3.5 text-ember flex-shrink-0 mt-0.5" />
                         <span>{del}</span>
                       </li>
                     ))}
@@ -142,10 +142,10 @@ export default function PricingPage() {
 
               <Link
                 href="/consultation"
-                className={`w-full py-3 rounded-md font-bold text-xs uppercase tracking-wider text-center transition-all ${
+                className={`w-full py-2.5 rounded-xl font-medium text-xs text-center transition-all ${
                   tier.featured
-                    ? "bg-primary text-white hover:bg-primary-dark"
-                    : "bg-white border border-border text-foreground hover:bg-muted-dark"
+                    ? "bg-ember text-white hover:bg-ember-hover"
+                    : "bg-paper border border-mist/50 text-ink hover:bg-mist/20"
                 }`}
               >
                 {tier.cta} →
