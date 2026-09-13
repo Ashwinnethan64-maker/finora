@@ -36,7 +36,7 @@ export function ProblemSection() {
           </span>
           <h2 className="font-sans font-bold text-3xl sm:text-5xl text-ink leading-tight tracking-tight">
             The numbers are there. <br />
-            <span className="text-graphite">The clarity isn't.</span>
+            <span className="text-graphite">The clarity isn&apos;t.</span>
           </h2>
         </div>
 

@@ -122,7 +122,7 @@ export default function PricingPage() {
                 </div>
 
                 <div className="text-xs text-graphite leading-relaxed pt-2 border-t border-mist/30">
-                  <strong className="text-ink">Who it's for: </strong> {tier.whoItsFor}
+                  <strong className="text-ink">Who it&apos;s for: </strong> {tier.whoItsFor}
                 </div>
 
                 <div className="space-y-2 pt-2">
